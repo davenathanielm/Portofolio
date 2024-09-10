@@ -35,10 +35,7 @@ const MySkills = [
         icon :php,
         title : "PHP"
     },
-    {
-        icon :css,
-        title : "Css"
-    },
+    
     {
         icon :laravel,
         title : "Laravel"
