@@ -1,6 +1,5 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import { motion } from "framer-motion";
 LogoComponent
 import { MySkills } from "../local/TechLogo";
 import LogoComponent from "./LogoComponent";
@@ -9,10 +8,10 @@ const Marque = () => (
   <Marquee
   pauseOnHover
   pauseOnClick
-  speed={150}
+  speed={100}
   gradient
   gradientColor="black"
-  gradientWidth={50}
+  gradientWidth={60}
   >
   {console.log(MySkills)}
 
