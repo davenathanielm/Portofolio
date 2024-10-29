@@ -8,7 +8,7 @@ import HomeContent from "../../content/HomeContent";
 import ProjectContent from "../../content/ProjectContent";
 import ContactContent from "../../content/ContactContent";
 import Footer from "../../components/footer/Footer";
-function HomeMain () {
+function HomeMain(){
 
   return (
     <div className="flex flex-col"> 
@@ -17,9 +17,6 @@ function HomeMain () {
       <ProjectContent/>
       <ContactContent/>
       <Footer/>
-
-      <main className="flex-grow"> 
-      </main>
   
     </div>
 

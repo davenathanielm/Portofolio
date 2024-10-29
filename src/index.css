@@ -113,7 +113,14 @@
 @font-face {
   font-family: 'NEUEPLAKSEMIBOLD';
   src: url('assets/fonts/NeuePlakSemiBold.ttf');
-
+}
+@font-face {
+  font-family: 'LARSSEITMEDIUM';
+  src: url('assets/fonts/larsseitMedium.otf');
+}
+@font-face {
+  font-family: 'LARSSEITBOLD';
+  src: url('assets/fonts/larsseitBold.otf');
 }
 
 
@@ -133,11 +140,13 @@ a:hover {
 
 body {
   margin: 0;
-  background-color: black;
-  place-items: center;
-  min-width: 100vw;
+  background-color: #000000;
+  color: #ffffff;
+  min-width: 320px;
   min-height: 100vh;
 }
+
+
 
 h1 {
   font-size: 3.2em;

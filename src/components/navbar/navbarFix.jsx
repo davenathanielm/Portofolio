@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SocialIcons from "../socialIcons";
+import { NavLink } from "react-router-dom";
 
 function NavbarFix(){
     const [showNavbar, setShowNavbar] = useState(true);
@@ -24,9 +25,17 @@ function NavbarFix(){
      return(
         <div className={`backdrop-blur-sm w-full p-2 fixed items-center transition-transform duration-700 ease-in-out ${
                 showNavbar ? 'translate-y-0' : '-translate-y-full'}`}>
-            <div className="flex justify-between px-4">
+            <div className="flex justify-between px-4 lg:px-32">
                <SocialIcons/>
-                <button className=" border border-purple-500 h-12 mt-4 hover:bg-customBackgroundButton ease-in-out transition duration-300">My Resume</button>
+               {/* <NavLink to={daveResume}>
+                    <button className=" border border-purple-500 h-12 mt-4 hover:bg-customBackgroundButton ease-in-out transition duration-300">My Resume</button>
+               </NavLink> */}
+               
+               <a href="/pdf/daveResume.pdf" target="_blank">
+                    <button className="border border-purple-500 h-12 mt-4 hover:bg-customBackgroundButton ease-in-out transition duration-300">
+                        My Resume
+                    </button>
+                </a>
             </div>
         </div>
     )

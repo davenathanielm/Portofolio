@@ -1,4 +1,4 @@
-import profileImage from '../assets/profileImage.jpg';
+import profileImage from '../assets/davepng.png';
 import adobePremiere from '../assets/techlogo/adobePremiere.png';
 import afterEffect from '../assets/techlogo/afterEffect.png';
 import android from '../assets/techlogo/android.png';

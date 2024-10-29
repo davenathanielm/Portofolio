@@ -4,7 +4,7 @@ import { slideUp, slideDown, slideLeft, slideRight } from '../local/Animation';
 
 function CardServices({ img, title, description}){
     return(
-        <motion.div className='mt-5 bg-customBackgroundServices rounded-3xl p-6 h-62 mx-12 flex flex-col items-start'
+        <motion.div className='bg-customBackgroundServices rounded-3xl p-6 h-62 lg:h-64 flex flex-col items-start mt-5'
         variants={slideUp}
         transition={{ duration:0.3, delay : 0.6}}
         >

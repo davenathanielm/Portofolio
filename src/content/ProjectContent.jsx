@@ -20,7 +20,8 @@
                             Projects.
                         </motion.h2>
                      </AnimateComponent>
-
+                    {/* Add Grid Layout so it can dynamic */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-7 lg:px-80">
                         {MyProjects.map((item) => {
                             return (
                                  <AnimateComponent>
@@ -34,6 +35,7 @@
                                  </AnimateComponent>
                             );
                         })}
+                    </div>
                    
                     
                     <AnimateComponent>
@@ -60,13 +62,13 @@
 
                     <div className=" mt-48 mb-8">
                         <AnimateComponent>
-                            <motion.p className='mb-2 text-lg font-magazinegrotesqueSemibold text-customPurple' variants={slideDown} transition={{ duration: 0.3 }}>Services</motion.p>
+                            <motion.p className='mb-2 text-xl font-magazinegrotesqueSemibold text-customPurple' variants={slideDown} transition={{ duration: 0.3 }}>Services</motion.p>
                         </AnimateComponent>
 
                         <AnimateComponent>
-                            <motion.h1 className='font-bold text-2xl mb-11 font-altehaasBold text-white' variants={ slideUp } transition={{ duration:0.3, delay :0.3 }}>I can help you with</motion.h1>
+                            <motion.h1 className='font-bold text-4xl mb-11 font-altehaasBold text-white' variants={ slideUp } transition={{ duration:0.3, delay :0.3 }}>I can help you with</motion.h1>
                         </AnimateComponent>
-
+                        <div className="grid grid-cols-1 lg:grid-cols-3 mx-12 mt-2 lg:mx-80 gap-5 lg:gap-10">
                             {services.map((item)=> {
                                 return(
                                     <AnimateComponent>
@@ -78,6 +80,7 @@
                                     </AnimateComponent>
                                 );
                             }) }
+                        </div>
                     </div>
 
                 </div>

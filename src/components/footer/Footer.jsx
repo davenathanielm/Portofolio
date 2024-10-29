@@ -8,8 +8,8 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 function Footer(){
     return(
         <div className="mt-44">
-            <p className="text-gray-500 font-semibold text-sm"> Ⓒ 2024 Dave Nathaniel</p>
-            <div className="mt-7">
+            <p className="text-gray-500 font-semibold text-sm mb-10"> Ⓒ 2024 Dave Nathaniel</p>
+            {/* <div className="mt-7">
                 <NavLink to="https://www.instagram.com/davenm_?igsh=OWk4MDRjbjV3MHAz">
                     <FontAwesomeIcon
                         icon = {faInstagram}
@@ -32,10 +32,9 @@ function Footer(){
                         className="text-white ml-3 mb-4"
                         size="lg"
                     />
-
                 </NavLink>
 
-            </div>
+            </div> */}
 
         </div>
     );

@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      spacing: {
+        'custom-mx': '28rem',
+      },
+
       maxHeight:{
           'custom' : '45rem'
       },
@@ -29,6 +33,8 @@ export default {
           magazinegrotesqueThin:['MAGAZINEGROTESQUETHIN'],
           neuePlakRegular:['NEUEPLAKREGULAR'],
           neuePlakSemiBold:['NEUEPLAKSEMIBOLD'],
+          larsseitMedium:['LARSSEITMEDIUM'],
+          larsseitBold:['LARSSEITBOLD'],
       },
 
       colors: {

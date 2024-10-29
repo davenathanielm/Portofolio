@@ -10,15 +10,15 @@ function Modal({ showModal, setShowModal, title, description, img, language, lin
     // prevent background scroll when modal open
     useEffect(() =>{
         if(showModal){
-            document.body.style.overflow = "hidden";
+            document.body.style.overflowY = "hidden";
         }
         else{
-            document.body.style.overflow = "auto";
+             document.body.style.overflowY = "auto";
         }
 
     //clean up when modal is closed
         return() => {
-            document.body.style.overflow = "auto";
+            document.body.style.overflowY = "auto";
         };
     },[showModal]);
 
