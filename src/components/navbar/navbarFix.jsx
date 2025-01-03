@@ -23,16 +23,14 @@ function NavbarFix(){
     }, [lastScrollY])
 
      return(
-        <div className={`backdrop-blur-sm w-full p-2 fixed items-center transition-transform duration-700 ease-in-out ${
-                showNavbar ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className={`backdrop-blur-extra-sm w-full p-2 fixed items-center transition-transform duration-700 ease-in-out ${
+                showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
+                style={{ zIndex:1000}}
+                >
             <div className="flex justify-between px-4 lg:px-32">
-               <SocialIcons/>
-               {/* <NavLink to={daveResume}>
-                    <button className=" border border-purple-500 h-12 mt-4 hover:bg-customBackgroundButton ease-in-out transition duration-300">My Resume</button>
-               </NavLink> */}
-               
+               <SocialIcons/> 
                <a href="/pdf/daveResume.pdf" target="_blank">
-                    <button className="border border-purple-500 h-12 mt-4 hover:bg-customBackgroundButton ease-in-out transition duration-300">
+                    <button className="border border-purple-500 h-12 mt-4 ease-in-out transition duration-300">
                         My Resume
                     </button>
                 </a>

@@ -6,12 +6,30 @@ export default {
   ],
   theme: {
     extend: {
+      backdropBlur: {
+        'extra-sm': '2px',
+      },
+      backgroundImage:{
+        'spaceImage': "url('/src/assets/background/space.png')",
+      },
       spacing: {
         'custom-mx': '28rem',
       },
 
       maxHeight:{
-          'custom' : '45rem'
+          'custom' : '45rem',
+      },
+
+      maxWidth:{
+          'custom' : '45rem',
+      },
+
+      height:{
+          'customCard': '23rem'
+      },
+
+      width:{
+          'customCardWidth': '40rem'
       },
 
       fontFamily: {
@@ -43,7 +61,9 @@ export default {
         customBackgroundButton : '#6412d6',
         customBackgroundServices:'#1c1924',
         customRocket: '#d5153c',
-        customBackgroundProject :'#232323'
+        customBackgroundProject :'#232323',
+        customGreen : '#0aff9d',
+        customLanguage : '#d896ff',
       },
     },
   },

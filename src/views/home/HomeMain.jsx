@@ -8,19 +8,18 @@ import HomeContent from "../../content/HomeContent";
 import ProjectContent from "../../content/ProjectContent";
 import ContactContent from "../../content/ContactContent";
 import Footer from "../../components/footer/Footer";
+import { BackgroundShooting,BackgroundStatic } from '../../local/Background';
 function HomeMain(){
-
   return (
     <div className="flex flex-col"> 
-      <NavbarFix/>
-      <HomeContent/>
-      <ProjectContent/>
-      <ContactContent/>
-      <Footer/>
-  
+      <div>
+        <NavbarFix/>
+        <HomeContent/>
+        <ProjectContent/>
+        <ContactContent/>
+        <Footer/>
+      </div>
     </div>
-
-
   );
 }
 

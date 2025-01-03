@@ -6,19 +6,41 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { NavLink } from 'react-router-dom';
 import Modal from './modal/modalProject';
 import { useState } from 'react';
+import { faDiamondTurnRight } from '@fortawesome/free-solid-svg-icons';
 
-function CardProject({ img, title, description, link , language}){
+function CardProject({ img, title, description, link , language, shortDescription}) {
     const [showModal, setShowModal] = useState(false);
 
     return(
-        // <div className='mt-10 mx-7 lg:w-96 mb-12'> 
-        <div className='mb-12'> 
-            <motion.div className='bg-customBackgroundProject rounded-xl h-48 lg:h-64 overflow-hidden'
+        <div className='mb-12'>
+            <motion.div className='bg-customBackgroundProject rounded-xl h-48 lg:h-customCard overflow-hidden'
                 variants={slideUp}
                 transition={{ duration:0.3, delay : 0.6}}>
 
                 {/*Image*/}
-                <motion.div 
+
+                {/* for mobile */}
+                <motion.div
+                    className="flex justify-center lg:hidden" // Applies animation only on smaller screens
+                    animate={{
+                        translateY: [0, -10, 0], // Move up slightly and back
+                    }}
+                    transition={{
+                        duration: 2, // Total duration for one cycle
+                        repeat: Infinity, // Loops the animation
+                        ease: "easeInOut", // Smooth transition
+                    }}
+                    onClick={() => setShowModal(true)}
+                    >
+                    <img
+                        className="w-72 h-44 lg:w-auto lg:h-customCard object-cover rounded-t-lg mt-9 lg:mt-0"
+                        src={img}
+                        alt=""
+                    />
+                </motion.div>
+
+                {/* for pc */}
+                <motion.div
                     className="flex justify-center"
                     whileHover={{
                         scale : 1.05,
@@ -27,7 +49,7 @@ function CardProject({ img, title, description, link , language}){
                     }}
                     onClick={() => setShowModal(true)}
                 >
-                    <img className='w-72 h-44 lg:w-96 lg:h-52 object-cover rounded-t-lg mt-9 lg:mt-14' src={img} alt=""/>
+                    <img className='w-72 h-44 lg:w-auto lg:h-customCard object-cover rounded-t-lg mt-9 lg:mt-0 ' src={img} alt=""/>
                 </motion.div>
             </motion.div>
 
@@ -37,29 +59,51 @@ function CardProject({ img, title, description, link , language}){
                     transition={{ duration:0.3 , delay:0.8 }}
                 >
                     <p className='w-64 lg:w-80'>{title}</p>
-                    <NavLink to= {link}>
+
+                    <NavLink to= {link} target='_blank'>
                                  <FontAwesomeIcon
-                                    icon={faGithub}
-                                    className="text-gray-400 hover:text-violet-500 mr-2 "
-                                    size="base"
+                                    icon={faGithub} 
+                                    className="text-gray-400 hover:text-violet-500 lg:ml-36"
+                                    size="lg"
                                 />
                     </NavLink>
+                    
+                    {/* this button for live web */}
+                    <NavLink to= {link} target='_blank'>
+                                 <FontAwesomeIcon
+                                    icon={faDiamondTurnRight}
+                                    className="text-gray-400 hover:text-violet-500 hidden lg:block "
+                                    size="lg"
+                                />
+                    </NavLink>
+                    
                 </motion.div>
 
-                <motion.div className="text-lg font-magazinegrotesqueSemibold text-left mx-3 text-violet-400 h-44 overflow-hidden"
+                <motion.div className="text-lg font-magazinegrotesqueSemibold text-left mx-3 text-customLanguage lg:h-28 overflow-hidden" //h-44 and overflow:hidden
                     variants={slideUp}
                     transition={{ duration:0.3 , delay:0.8 }}
-                >
-                    <p>{language}</p>
+                    >
+                    <div className="flex flex-wrap gap-2">
+                        {language.split('-').map((word,index) =>(
+                            <span key={index} className='px-2 py-1 bg-customBackgroundNavBar font-bold text-white rounded-full text-sm'>
+                                {word}
+                            </span>
+                        ))}
+                    </div>    
+                    {/* <p>{language}</p> */}
 
-                    {/* description */}
-                    <p className='text-gray-400 mt-2 text-lg '>{description}</p>
+                    {/* change to short description */}
+                    <p className='text-gray-400 mt-3 text-lg '>{shortDescription}</p>
                 </motion.div>
-                
-                <motion.div className="text-violet-400 text-right block mx-3 mt-1 hover:underline"
+
+                <motion.div className="text-violet-400 text-right mx-3 mt-1 hover:underline"
                     variants={slideUp}
-                    transition={{ duration:0.3 , delay:0.8 }}>
-                    <p className='font-satoshiMedium text-lg' onClick={() => setShowModal(true)}>view more {'>'}</p>
+                    transition={{ duration:0.3 , delay:0.1 }}
+                    whileHover={{scale:1.1}}
+                    >
+                    {/* <p className='font-satoshiMedium text-lg' onClick={() => setShowModal(true)}>view more {'>'}</p> */}
+
+                    {/* <button className='border-purple-500 text-white px-10' > live </button> */}
                 </motion.div>
 
                 {/* Modal */}
