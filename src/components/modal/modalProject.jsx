@@ -43,21 +43,15 @@ function Modal({ showModal, setShowModal, title, description, img, language, lin
                         variants={slideUp}
                         transition={{ }}
                     >
-                    {/* <button
-                        className=" absolute top-4 right-4 text-gray-600"
-                        onClick={() => setShowModal(false)}
-                    >
-                        X
-                    </button> */}
                     <img src={img} alt={title} className="w-full h-56 lg:h-96 object-cover rounded-t-xl mb-4"/>
                     <div className="px-5 text-left">
                         <h2 className="text-3xl font-magazinegrotesqueBold mb-2 mt-8">{title}</h2>
                         <div className="flex flex-wrap gap-2">
-                            {/* {language.split("-").map((word,index) =>(
+                            {language.split("-").map((word,index) =>(
                                 <span key={index} className="px-2 py-1 bg-customBackgroundNavBar font-bold text-white rounded-full text-sm mb-2">
                                     {word}
                                 </span>
-                            ))} */}
+                            ))}
                         </div>
 
                         {/* <h2 className="text-lg font-magazinegrotesqueSemibold text-violet-400 mb-5">{language}</h2> */}

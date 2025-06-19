@@ -9,34 +9,24 @@ import image from '../local/Sticker';
 
 function HomeContent() {  
     
-    const profileImage = MyProfile[0].icon
+    const profileImage = MyProfile.icon
     
     return(
         <AnimateComponent>
             <div className="relative w-full">
                 <video 
-                    className="absolute top-0 left-0 w-full h-full object-cover z-0"
-                    src={BackgroundStatic.bgVideo} 
+                    className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-55"
+                    src={BackgroundStatic.bgVideo}
                     autoPlay 
                     loop 
                     muted 
                     playsInline
                 />
                 <div className="home pt-52 relative">
-                    {/* <img src={image.astronout2}
-                        alt=""
-                        className='lg:w-96 lg:h-96 w-60 h-60 absolute top-0 right-0 lg:mr-28 mt-16 lg:block hidden'/>
-                    <img src={image.stone3}
-                        alt=""
-                        className='lg:w-40 lg:h-40 w-48 h-48 mb-32 ml-10 absolute left-0 top-0  my-auto p-3 z-20 hidden lg:block'/>  */}
-                        
-                    {/* this is for glowing ball */}
-                    {/* <div className='w-10 h-10 bg-gradient-to-r from-pink-200 to-purple-400 rounded-full shadow-2xl shadow-purple-200 ml-32'/> */}
-                
                     <div className='w-24 h-24 bg-gradient-to-r from-pink-200 to-purple-400 rounded-full shadow-2xl shadow-purple-800 mx-auto relative z-10'>
-                        {/* <img src={profileImage}
+                        <img src={profileImage}
                         alt=""
-                        className='w-24 h-24 mx-auto my-auto p-3'/> */}
+                        className='w-24 h-24 mx-auto my-auto p-3'/>
                     </div>
                     <div className="text-center mt-5">
                         <motion.p className="text-customPurple font text-base font-altehaasBold" variants={slideUp} transition={{duration : 0.7}}>

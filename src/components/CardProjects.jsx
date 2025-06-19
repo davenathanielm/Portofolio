@@ -1,6 +1,6 @@
 import thumbnailEfata from '../assets/thumbnail/thumbnailEfata.jpg';
 import {motion} from "framer-motion"
-import { slideUp, slideDown, slideLeft, slideRight } from '../local/Animation';
+import { slideUp,slideUpCircle ,slideDown,slideDownCircle ,slideLeft,slideLeftCircle, slideRight,slideRightCircle} from '../local/Animation';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { NavLink } from 'react-router-dom';
@@ -8,7 +8,7 @@ import Modal from './modal/modalProject';
 import { useState } from 'react';
 import { faDiamondTurnRight } from '@fortawesome/free-solid-svg-icons';
 
-function CardProject({ img, title, description, link , language, shortDescription}) {
+function CardProject({ img, title, description, link , language, shortDescription, status}) {
     const [showModal, setShowModal] = useState(false);
 
     return(
@@ -49,7 +49,7 @@ function CardProject({ img, title, description, link , language, shortDescriptio
                     }}
                     onClick={() => setShowModal(true)}
                 >
-                    <img className='w-72 h-44 lg:w-auto lg:h-customCard object-cover rounded-t-lg mt-9 lg:mt-0 ' src={img} alt=""/>
+                    <img className='lg:w-auto lg:h-customCard object-cover rounded-t-lg mt-9 lg:mt-0 ' src={img} alt=""/>
                 </motion.div>
             </motion.div>
 
@@ -58,12 +58,20 @@ function CardProject({ img, title, description, link , language, shortDescriptio
                     variants={slideUp}
                     transition={{ duration:0.3 , delay:0.8 }}
                 >
-                    <p className='w-64 lg:w-80'>{title}</p>
+                    <div className='w-64 lg:w-80 '>
+                        {title} 
+                        <span 
+                        className={`ml-2 p-1 text-sm rounded-xl font-bold 
+                        ${ status.toLowerCase() === 'ongoing' ?' bg-yellow-300 text-black' : 'bg-green-700 text-white'
+                        }`}>
+                            {status}
+                        </span>
+                    </div>
 
                     <NavLink to= {link} target='_blank'>
                                  <FontAwesomeIcon
                                     icon={faGithub} 
-                                    className="text-gray-400 hover:text-violet-500 lg:ml-36"
+                                    className="text-gray-400 hover:text-violet-500 lg:ml-32"
                                     size="lg"
                                 />
                     </NavLink>
@@ -72,7 +80,7 @@ function CardProject({ img, title, description, link , language, shortDescriptio
                     <NavLink to= {link} target='_blank'>
                                  <FontAwesomeIcon
                                     icon={faDiamondTurnRight}
-                                    className="text-gray-400 hover:text-violet-500 hidden lg:block "
+                                    className="text-gray-400 hover:text-violet-500 hidden lg:block lg:ml-3 "
                                     size="lg"
                                 />
                     </NavLink>
