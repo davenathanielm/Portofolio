@@ -5,7 +5,7 @@ import { slideUp, slideDown, slideLeft, slideRight } from '../local/Animation';
 
 function CardTools({ img, img2, img3}){
     return(
-        <motion.div className='flex justify-between mt-6 mx-20 py-3' variants={slideRight} transition={{ duration : 0.6, delay: 0.3 }}>
+        <motion.div className='flex justify-between mt-6 mx-20 py-3 lg:space-x-20 lg:justify-center' variants={slideRight} transition={{ duration : 0.6, delay: 0.3 }}>
             <div className="flex items-center space-x-2">
                 <img 
                     src = {img} 

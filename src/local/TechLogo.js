@@ -1,4 +1,5 @@
-import profileImage from '../assets/profileImage.jpg';
+// import profileImage from '../assets/davepng.png';
+import profileImage from '../assets/sticker/peopleIcon.png';
 import adobePremiere from '../assets/techlogo/adobePremiere.png';
 import afterEffect from '../assets/techlogo/afterEffect.png';
 import android from '../assets/techlogo/android.png';
@@ -16,11 +17,11 @@ import react from '../assets/techlogo/react.png';
 import tailwind from '../assets/techlogo/tailwind.png';
 import mysql from '../assets/techlogo/mysql.png';
 
-const MyProfile = [
+const MyProfile = 
     {
         icon: profileImage,
     }
-];
+
 
 const MySkills = [
     {

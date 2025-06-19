@@ -2,7 +2,7 @@ import {motion, useInView, useAnimation} from "framer-motion"
 import { useEffect, useRef } from "react"
 
 //use default if only want to export 1 component, but use export const if want export many function
-export default function AnimateComponent({ children, props }){
+export default function AnimateComponent({ children, props }){  
     const ref = useRef(null);
     const isInView = useInView(ref,{once: true})
     const animation = useAnimation();
@@ -12,7 +12,7 @@ export default function AnimateComponent({ children, props }){
         if(isInView){
             animation.start("visible");
         }
-    }, [isInView]);
+    }, [isInView]); //runs whenever isInView changes
 
     // use props so i don't need to pass it manually  
     return(
