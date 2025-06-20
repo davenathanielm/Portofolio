@@ -61,7 +61,7 @@
                             })}
                         </div>
                         {showProject < MyProjects.length &&(
-                            <motion.button onClick={handleLoadProject} className='border border-purple-500 lg:mb-20 mb-10'>load more</motion.button>
+                            <motion.button onClick={handleLoadProject} className='border border-purple-500 bg-black lg:mb-20 mb-10'>load more</motion.button>
                         )}
                     </AnimateComponent>
                 </div>
@@ -132,7 +132,7 @@
                                     ))}
                         </div> 
                             {showCertificate < certificate.length &&(
-                                <motion.button onClick={handleLoadMore} className='lg: mt-5 border border-purple-500'>load more</motion.button>
+                                <motion.button onClick={handleLoadMore} className='lg: mt-5 border border-purple-500 bg-black'>load more</motion.button>
                             )}
                     </div>
                 </AnimateComponent>
