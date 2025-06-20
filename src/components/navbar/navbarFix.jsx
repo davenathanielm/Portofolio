@@ -25,7 +25,7 @@ function NavbarFix(){
      return(
         <div className={`backdrop-blur-extra-sm w-full p-2 fixed items-center transition-transform duration-700 ease-in-out ${
                 showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
-                style={{ zIndex:1000}}
+                style={{ zIndex:40}}
                 >
             <div className="flex justify-between px-4 lg:px-32">
                <SocialIcons/> 
