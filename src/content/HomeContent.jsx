@@ -33,7 +33,7 @@ function HomeContent() {
                             Hi I'm Dave  
                         </motion.p>
                         
-                        <motion.h1 className='px-6 py-7 text-5xl lg:px-72 lg:text-7xl font-magazinegrotesqueSemibold font-bold text-white' variants={slideUp} transition={{duration : 1.3, delay: 0.5}}> Building websit,
+                        <motion.h1 className='px-6 py-7 text-5xl lg:px-72 lg:text-7xl font-magazinegrotesqueSemibold font-bold text-white' variants={slideUp} transition={{duration : 1.3, delay: 0.5}}> Building website,
                             and android to another level </motion.h1>
                         
                         <motion.p className='px-12 text-gray-400 mb-24 lg:pb-48 pb-16 font-satoshiMedium lg:font-altehaas lg:mx-custom-mx lg:text-lg'variants={slideUp} transition={{duration : 1.3, delay: 1}}> I'm a Full Stack Developer based in Indonesia, specializing in Android development and responsive websites 🚀</motion.p>
