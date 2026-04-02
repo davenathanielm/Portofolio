@@ -25,14 +25,30 @@ import boardTest from '../assets/thumbnail/boardTes.jpg';
 import mockup from '../assets/thumbnail/mockup.png';
 import trial from '../assets/thumbnail/trial2.png';
 import showcaseEfatta from '../assets/thumbnail/showcaseEfatta.png';
+import zeinly from '../assets/thumbnail/zeinly.png';
 import showcaseKelas from '../assets/thumbnail/showcaseKelas.png';
 import showcaseLithium from '../assets/thumbnail/showcaseLithium.png';
 import showcaseManpower from '../assets/thumbnail/showcaseManpower.png';
 import showcaseMingMotor from '../assets/thumbnail/showcaseMingMotor.png';
-import apalah from '../assets/thumbnail/apalah.png';
+import showcasePortofolio from '../assets/thumbnail/showcasePortofolio.png';
 import showcaseSupplierManagement from '../assets/thumbnail/showcaseSupplierManagement.png';
 
 const MyProjects =[
+    {
+        title : "Zeinly",
+        img : zeinly,
+        description :[
+            "Zeinly.id is a modern and responsive company profile website for an digital agency business, created to showcase their services, portfolio, and contact information professionally.",
+            "The website is being developed using Next.js, allowing for fast performance, SEO optimization, and a scalable structure.",
+            "It features a clean, simple layout with premium animation, so users can enjoy a seamless browsing experience.",
+            "The project includes responsive design for mobile and desktop views, ensuring accessibility across all devices. I also make sure to optimize the website for search engines, so it can reach a wider audience and attract potential clients.",
+        ],
+        shortDescription : "Zeinly is a profile website built with Next.js to showcase digital solution services with a modern and responsive website.",
+        link :"https://www.zeinly.id/en",
+        status : "Completed",
+        language : "Next.js - PostgreSQL - TailwindCSS - FramerMotion - API"
+        
+    },
     {
         title : "Efatta Interior Design",
         img : showcaseEfatta,
@@ -120,7 +136,7 @@ const MyProjects =[
     },
     {
         title : "Portofolio website",
-        img :apalah,
+        img :showcasePortofolio,
         description :[
             "This portfolio website is a personal showcase of my web development projects, designed to highlight my skills in building modern, responsive, and user-friendly applications.",
             "Built with Next.js, it features smooth animations, clean UI, and optimized performance.",
